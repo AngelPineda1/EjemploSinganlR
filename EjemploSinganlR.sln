@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSignalR", "ApiSignalR\ApiSignalR.csproj", "{D1EBCB0A-ACE5-4120-8FA4-62FB3C7F9BBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSignalR", "ApiSignalR\ApiSignalR.csproj", "{D1EBCB0A-ACE5-4120-8FA4-62FB3C7F9BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaSignalR", "PruebaSignalR\PruebaSignalR.csproj", "{83B35276-2B51-49D8-B552-1C4D52D4B7B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D1EBCB0A-ACE5-4120-8FA4-62FB3C7F9BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1EBCB0A-ACE5-4120-8FA4-62FB3C7F9BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1EBCB0A-ACE5-4120-8FA4-62FB3C7F9BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B35276-2B51-49D8-B552-1C4D52D4B7B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B35276-2B51-49D8-B552-1C4D52D4B7B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B35276-2B51-49D8-B552-1C4D52D4B7B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B35276-2B51-49D8-B552-1C4D52D4B7B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
