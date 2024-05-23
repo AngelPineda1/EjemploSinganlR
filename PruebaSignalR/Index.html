@@ -6,7 +6,7 @@
     <input type="text" id="txtNombre" />
     <input type="button" value="Agregar" id="btnAgregar" />
     <input type="button" value="Eliminar" id="btnEliminar" /><br />
-    <select size="20" style="width:300px">
+    <select size="20" style="width:300px" id="lstNombres">
     </select>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
     <script>
@@ -28,7 +28,12 @@
                 setTimeout(start, 5000);
             }
         };
-
+        var lst=document.querySelector("#lstNombres")
+        connection.on("NombreNuevo", (nombre) => {
+            var option = document.createElement("OPTION");
+            option.textContent = nombre;
+            lst.appendChild(option);
+        });
        
 
         // Start the connection.
