@@ -16,21 +16,40 @@ namespace PruebaSignalR
                 .WithUrl("https://octavo.itesrc.net/nombres").
                 WithAutomaticReconnect()
                 .Build();
-            hub.On<string>("NombreNuevo",x =>
+            hub.On<string>("NombreNuevo", x =>
             {
-                this.BeginInvoke(() => {
+                this.BeginInvoke(() =>
+                {
 
                     lstLista.Items.Add(x);
-                } );
+                    lstLista.SelectedIndex=lstLista.Items.Count-1;
+                });
+            });
+            hub.On<string>("NombreBorrado", x =>
+            {
+                this.BeginInvoke(() =>
+                {
+
+                    lstLista.Items.Remove(x);
+                });
             });
             await hub.StartAsync();
         }
 
         private async void btnEnviar_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrWhiteSpace(txtNombre.Text))
+            if (!string.IsNullOrWhiteSpace(txtNombre.Text))
             {
-                 await hub.InvokeAsync("AgregarNombre",txtNombre.Text);
+                await hub.InvokeAsync("AgregarNombre", txtNombre.Text);
+            }
+        }
+
+        private async void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                await hub.InvokeAsync("EliminarNombre", txtNombre.Text);
+                txtNombre.Text = "";
             }
         }
     }

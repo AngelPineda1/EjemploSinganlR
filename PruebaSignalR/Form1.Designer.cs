@@ -31,6 +31,7 @@
             txtNombre = new TextBox();
             btnEnviar = new Button();
             lstLista = new ListBox();
+            btnBorrar = new Button();
             SuspendLayout();
             // 
             // txtNombre
@@ -59,11 +60,22 @@
             lstLista.Size = new Size(472, 304);
             lstLista.TabIndex = 2;
             // 
+            // btnBorrar
+            // 
+            btnBorrar.Location = new Point(650, 23);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(112, 34);
+            btnBorrar.TabIndex = 3;
+            btnBorrar.Text = "Borrar";
+            btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnBorrar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBorrar);
             Controls.Add(lstLista);
             Controls.Add(btnEnviar);
             Controls.Add(txtNombre);
@@ -79,5 +91,6 @@
         private TextBox txtNombre;
         private Button btnEnviar;
         private ListBox lstLista;
+        private Button btnBorrar;
     }
 }

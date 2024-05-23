@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ApiSignalR.Hubs
 {
     public class NombresHub:Hub
     {
-        int x = 0;
+       
         public async void AgregarNombre(string nombre)
         {
             // Hacer algo con el nombre
@@ -12,9 +13,9 @@ namespace ApiSignalR.Hubs
 
         }
 
-        public async void EliminarNombre(string noombre)
+        public async void EliminarNombre(string nombre)
         {
-            
+            await Clients.All.SendAsync("NombreBorrado", nombre);
         }
 
     }
